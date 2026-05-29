@@ -1,0 +1,191 @@
+.App-container{
+  background-color: var(--Rose_50);
+  border-radius: 5px;
+  position: relative;
+  line-height: 1rem;
+  padding: 0 3% 4% 3%; 
+  margin: 3% 6%;
+  height: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+:root{
+  overflow: auto;
+}
+
+.App-header h2{
+  text-align: left;
+  font-size:x-large;
+  font-weight: 600;
+}
+.App-header{
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.product-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .1%; 
+  line-height: 0.4rem;
+  overflow-y:scroll;
+  overflow-x: hidden;
+  display:grid;
+  border: none;
+  height: 100vh;
+}
+
+.Cart{
+  min-width: 25%;
+  text-align: center;
+  margin-top: 15.5%;
+}
+
+/* --------------------------------------------------*/
+@media (max-width: 1040px) {
+  .App-container{
+    display:flex; flex-direction: column;
+  }
+}
+@media (max-width: 740px) {
+  .products-list{
+  display: flex; 
+  align-items: center; justify-content: center;
+}
+  /* .products-container{
+  } */
+}
+/* -------FONT STYLING------------ */
+h1{
+  color: black;
+  font-weight: 500;
+}
+
+p,h4{  
+  font-size: 16px;
+  font-weight: 500;
+}
+/* ------------------------------------------------------------ */
+/* General scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Light background for the track */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c73b0f; /* Main color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the thumb */
+  border: 2px solid #f0f0f0; /* Space between thumb and track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #892505; /* Darker color when hovering */
+}
+
+/* Styling for Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: transparent transparent; /* Thumb and track colors */
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #fcf8f6;
+}
+
+.login-card {
+  width: min(90%, 380px);
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-card h1 {
+  margin: 0;
+  color: #260f08;
+}
+
+.login-card input {
+  padding: 14px;
+  border: 1px solid #c9aea6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-card button {
+  padding: 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #c73b0f;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-error {
+  color: #c73b0f;
+  margin: 0;
+}
+
+.login-help {
+  font-size: 14px;
+  color: #87635a;
+}
+.logout-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  background: linear-gradient(135deg, #c73b0f, #e85d2f);
+  color: white;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 12px 22px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(199, 59, 15, 0.3);
+
+  transition: all .25s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(199, 59, 15, 0.4);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+.logout-btn::before {
+  content: "👤 ";
+}
+.success-message {
+  background: #e8f8ee;
+  color: #1f7a3f;
+  border: 1px solid #9fddb5;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  margin: 12px 0;
+}
